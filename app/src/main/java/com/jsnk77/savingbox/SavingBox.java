@@ -13,6 +13,7 @@ public class SavingBox {
         total = 0;
     }
 
+
     //１００円追加
     public void insertCoin100(int coins){
         if(coins > 0){

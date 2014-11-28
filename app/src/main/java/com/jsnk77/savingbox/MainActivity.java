@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.microsoft.windowsazure.mobileservices.MobileServiceApplication;
 
 
 public class MainActivity extends Activity {
@@ -19,7 +18,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
 
         //100円追加のボタンイベント
@@ -49,7 +47,7 @@ public class MainActivity extends Activity {
                 }
         );
 
-                      
+
 
         //500円追加のボタンイベント
         Button btn1 =(Button)findViewById(R.id.fivehButton);
