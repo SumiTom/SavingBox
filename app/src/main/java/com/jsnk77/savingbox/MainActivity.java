@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //addition of $100 
+        //addition of 100 yen 
         Button btn =(Button)findViewById(R.id.onehButton);
         btn.setOnClickListener(
                 new View.OnClickListener(){
@@ -39,14 +39,14 @@ public class MainActivity extends Activity {
 
                         //Show total value in a textbox
                         TextView totalCash =(TextView)findViewById(R.id.totalCash);
-                        totalCash.setText(String.format("It is $ %d", total_yen));
+                        totalCash.setText(String.format("It is %d Yen", total_yen));
                     }
                 }
         );
 
 
 
-        //addition of $500
+        //addition of 500 yen
         Button btn1 =(Button)findViewById(R.id.fivehButton);
         btn1.setOnClickListener(
                 new View.OnClickListener(){
@@ -66,7 +66,7 @@ public class MainActivity extends Activity {
 
                         //Show total value in a textbox
                         TextView totalCash =(TextView)findViewById(R.id.totalCash);
-                        totalCash.setText(String.format("It is $ %d", total_yen));
+                        totalCash.setText(String.format("It is %d Yen", total_yen));
                     }
                 }
         );
