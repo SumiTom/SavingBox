@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-
 public class MainActivity extends Activity {
 
     @Override
@@ -19,59 +18,55 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        //100円追加のボタンイベント
+        //addition of $100 
         Button btn =(Button)findViewById(R.id.onehButton);
         btn.setOnClickListener(
                 new View.OnClickListener(){
 
                     public void onClick(View view){
 
-                        //コインの枚数のID獲得
+                        //get the number of coins
                         EditText coinsNumber =(EditText)findViewById(R.id.coinsNumber);
 
-                        //string →　int 変換
+                        //convert string → int
                         Editable getText = coinsNumber.getText();
                         int int_text = Integer.parseInt(getText.toString());
 
-                        //SavingBoxクラスで計算　total_yenに合計を代入
+                        //Calculate the value as SavingBox class and get the total additional savings
                         SavingBox input = new SavingBox();
                         input.insertCoin100(int_text);
                         int total_yen = input.getTotal();
 
-                        //totalCashにtotal_yenを代入　テキストボックスに結果を表示
+                        //Show total value in a textbox
                         TextView totalCash =(TextView)findViewById(R.id.totalCash);
-                        totalCash.setText(String.format("%d円です", total_yen));
-
+                        totalCash.setText(String.format("It is $ %d", total_yen));
                     }
                 }
         );
 
 
 
-        //500円追加のボタンイベント
+        //addition of $500
         Button btn1 =(Button)findViewById(R.id.fivehButton);
         btn1.setOnClickListener(
                 new View.OnClickListener(){
-
                     public void onClick(View view){
 
-                        //コインの枚数のID獲得
+                        //get the number of coins
                         EditText coinsNumber =(EditText)findViewById(R.id.coinsNumber);
 
-                        //string →　int 変換
+                        //convert string → int
                         Editable getText = coinsNumber.getText();
                         int int_text = Integer.parseInt(getText.toString());
 
-                        //SavingBoxクラスで計算　total_yenに合計を代入
+                        //Calculate the value as SavingBox class and get the total additional savings
                         SavingBox input = new SavingBox();
                         input.insertCoin500(int_text);
                         int total_yen = input.getTotal();
 
-                        //totalCashにtotal_yenを代入　テキストボックスに結果を表示
+                        //Show total value in a textbox
                         TextView totalCash =(TextView)findViewById(R.id.totalCash);
-                        totalCash.setText(String.format("%d円です", total_yen));
-
+                        totalCash.setText(String.format("It is $ %d", total_yen));
                     }
                 }
         );
@@ -97,31 +92,6 @@ public class MainActivity extends Activity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
-
-
-
-/*
-    public void fivehButton_onClick(View view){
-        EditText coinsNumber =(EditText) findViewById(coinsNumber);
-
-        Editable getText = coinsNumber.getText();
-        int int_text = Integer.parseInt(getText.toString());
-
-
-        SavingBox input = new SavingBox();
-        input.insertCoin500(coinsNumber);
-
-        new SavingBox().getTotal();
-    }
-*/
-
-
-
-
-
-
-
 }
